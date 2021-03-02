@@ -31,7 +31,13 @@ body {
     padding: 0;
     margin: 0;
   }
-  .logo {
+  .dlogo{
+      display: none;
+  }
+  .desktopPic{
+      display: none;
+  }
+  .mlogo {
     padding: 1rem;
     width: 30%;
   }
@@ -49,6 +55,7 @@ body {
     width: 100%;
     font-size: 6rem;
     text-align: center;
+    color: #413a3a;
   }
 
   #weAre {
@@ -58,11 +65,9 @@ body {
   }
   #coming {
     display: block;
-    color: #413a3a;
   }
   #soon {
     display: block;
-    color: #413a3a;
   }
   .detailsText{
       color: #ce9797;
@@ -70,4 +75,60 @@ body {
       font-size: 1.7rem;
       padding: 2rem;
   }
+}
+
+/* Desktop Query */
+@media only screen and (min-width: 689px){
+    .mobilePic{
+        display: none;
+    }
+body{
+    width: 100%;
+    height: 100vh;
+}
+.mcontainer{
+    display: flex;
+}
+.lSection{
+    width: 45%;
+}
+.rSection{
+    width: 55%;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.desktopPic{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    text-align: center;
+    font-size: 6rem;
+    color: #413a3a;
+}
+#weAre{
+    font-weight: 300;
+    color: #ce9797;
+}
+.mlogo{
+    display: none;
+}
+.dlogo{
+    padding: 1rem;
+    width: 30%;
+    height: max-content;
+}
+.detailsText{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 70%;
+    font-weight: 300;
+    color: #ce9797;
+}
+
 }
