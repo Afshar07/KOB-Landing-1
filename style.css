@@ -18,11 +18,11 @@
 /* CSS Reset */
 html {
   width: 100%;
-  height: 100%;
+  height: max-content;
 }
 body {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: "iranSans", sans-serif;
@@ -35,6 +35,9 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
+  }
+  .logo {
+    display: none;
   }
   .dlogo {
     display: none;
@@ -89,35 +92,48 @@ body {
   }
   body {
     width: 100%;
-    height: 100vh;
-  }
-  .mcontainer {
-    display: flex;
-  }
-  .lSection {
-    width: 55%;
-  }
-  .rSection {
-    width: 45%;
-    direction: rtl;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-image: url(images/bg-pattern-desktop.svg); */
+    height: max-content;
     background: linear-gradient(
         0deg,
         rgba(255, 255, 255, 0.75),
         rgba(228, 228, 228, 0.75)
       ),
       url("images/BG-test.jpg");
+  }
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .mcontainer {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+  .lSection {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rSection {
+    width: 50%;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: url(images/bg-pattern-desktop.svg); */
 
     background-repeat: repeat;
-
   }
   .desktopPic {
-    width: 100%;
-    height: 100vh;
+    width: 90%;
+    height: 80vh;
     filter: brightness(80%);
+    border-radius: 50px;
+    padding: 1rem;
   }
   .title {
     text-align: center;
@@ -141,7 +157,6 @@ body {
   }
   .dlogo {
     padding: 1rem;
-    width: 30%;
     height: max-content;
   }
   .detailsText {
@@ -149,10 +164,10 @@ body {
     text-align: center;
     width: 70%;
     font-weight: 300;
-    color: #5C604D;
+    color: #5c604d;
   }
   #contact-us {
-    width: 15rem;
+    width: 21rem;
     height: 2.7rem;
     font-size: 1.3rem;
     border: none;
@@ -163,16 +178,16 @@ body {
     color: #0d6b23;
     cursor: pointer;
     outline: none;
-    transition: all .3s;
+    transition: all 0.3s;
     margin-bottom: 1rem;
     text-align: center;
   }
-  #contact-us:hover{
+  #contact-us:hover {
     background-color: #068f26a2;
     color: white;
     border: none;
   }
-  #shop{
+  #shop {
     text-align: center;
     width: 21rem;
     height: 2.7rem;
@@ -185,11 +200,25 @@ body {
     color: #0096bb;
     cursor: pointer;
     outline: none;
-    transition: all .3s;
+    transition: all 0.3s;
   }
-  #shop:hover{
+  #shop:hover {
     background-color: #0096bb94;
     color: white;
     border: none;
+  }
+  blockquote {
+    direction: rtl;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(71, 71, 71);
+  }
+  blockquote::before {
+    content: "\201C";
+    color: red;
+  }
+  blockquote::after {
+    content: "\201D";
+    color: red;
   }
 }
