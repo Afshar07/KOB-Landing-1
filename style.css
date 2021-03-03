@@ -1,5 +1,10 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+@font-face {
+  font-family: "iranSans";
+  src: url(fonts/IRANSansWeb_Light.woff) format("woff"),
+    url(fonts/IRANSansWeb_Light.woff2) format("woff2");
+}
 
 /* Copyright Style */
 .attribution {
@@ -20,7 +25,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "iranSans", sans-serif;
 }
 
 /* Mobile Query */
@@ -31,11 +36,11 @@ body {
     padding: 0;
     margin: 0;
   }
-  .dlogo{
-      display: none;
+  .dlogo {
+    display: none;
   }
-  .desktopPic{
-      display: none;
+  .desktopPic {
+    display: none;
   }
   .mlogo {
     padding: 1rem;
@@ -69,66 +74,122 @@ body {
   #soon {
     display: block;
   }
-  .detailsText{
-      color: #ce9797;
-      text-align: center;
-      font-size: 1.7rem;
-      padding: 2rem;
+  .detailsText {
+    color: #ce9797;
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 2rem;
   }
 }
 
 /* Desktop Query */
-@media only screen and (min-width: 689px){
-    .mobilePic{
-        display: none;
-    }
-body{
+@media only screen and (min-width: 689px) {
+  .mobilePic {
+    display: none;
+  }
+  body {
     width: 100%;
     height: 100vh;
-}
-.mcontainer{
+  }
+  .mcontainer {
     display: flex;
-}
-.lSection{
-    width: 45%;
-}
-.rSection{
+  }
+  .lSection {
     width: 55%;
+  }
+  .rSection {
+    width: 45%;
     direction: rtl;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(images/bg-pattern-desktop.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.desktopPic{
+    /* background-image: url(images/bg-pattern-desktop.svg); */
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.75),
+        rgba(228, 228, 228, 0.75)
+      ),
+      url("images/BG-test.jpg");
+
+    background-repeat: repeat;
+
+  }
+  .desktopPic {
     width: 100%;
-    height: 100%;
-}
-.title{
+    height: 100vh;
+    filter: brightness(80%);
+  }
+  .title {
     text-align: center;
-    font-size: 6rem;
+    font-size: 2rem;
     color: #413a3a;
-}
-#weAre{
+    filter: brightness(100%);
+  }
+  #weAre {
     font-weight: 300;
-    color: #ce9797;
-}
-.mlogo{
+    color: #413a3a;
+  }
+  #coming {
+    color: #4b967b;
+    font-weight: bold;
+  }
+  #soon {
+    font-weight: 300;
+  }
+  .mlogo {
     display: none;
-}
-.dlogo{
+  }
+  .dlogo {
     padding: 1rem;
     width: 30%;
     height: max-content;
-}
-.detailsText{
-    font-size: 1.5rem;
+  }
+  .detailsText {
+    font-size: 1.2rem;
     text-align: center;
     width: 70%;
     font-weight: 300;
-    color: #ce9797;
-}
-
+    color: #5C604D;
+  }
+  #contact-us {
+    width: 15rem;
+    height: 2.7rem;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 20px;
+    font-family: "iranSans", sans-serif;
+    background: transparent;
+    border: 1px solid #0d6b23;
+    color: #0d6b23;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  #contact-us:hover{
+    background-color: #068f26a2;
+    color: white;
+    border: none;
+  }
+  #shop{
+    text-align: center;
+    width: 21rem;
+    height: 2.7rem;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 20px;
+    font-family: "iranSans", sans-serif;
+    background: transparent;
+    border: 1px solid #0096bb;
+    color: #0096bb;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s;
+  }
+  #shop:hover{
+    background-color: #0096bb94;
+    color: white;
+    border: none;
+  }
 }
